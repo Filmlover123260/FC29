@@ -1,0 +1,6 @@
+{
+  "name": "FC 26 Ultimate Team & Match Day",
+  "description": "High-velocity football simulation suite featuring Live Match Day gameplay, Ultimate Team squad builder, Card Packs store, and Seasons & Club progression.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

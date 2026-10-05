@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-volt: #d9ef26;
+    --color-cyan: #00eefc;
+    --color-violet: #8638d7;
+    --color-error: #ffb4ab;
+    --color-surface-lowest: #0a0f13;
+    --color-surface: #101419;
+    --color-surface-card: #181c21;
+    --color-surface-hover: #262a30;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0f13;
+    color: #e0e2ea;
+    font-family: 'Chivo', -apple-system, BlinkMacSystemFont, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar for pack store, squad bench, etc. */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0f13;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262a30;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d9ef26;
+  }
+}
+
+.font-headline {
+  font-family: 'Anybody', sans-serif;
+}
+
+.font-body {
+  font-family: 'Chivo', sans-serif;
+}
+
+.font-label {
+  font-family: 'Space Grotesk', monospace;
+}
+
+.glass-panel {
+  background: rgba(16, 20, 25, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-pill {
+  background: rgba(24, 28, 33, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.joystick-surface {
+  background: radial-gradient(circle at 35% 35%, rgba(49, 53, 59, 0.9) 0%, rgba(16, 20, 25, 0.98) 75%);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.15), 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+.clip-chamfer {
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.clip-card-shield {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+}
+
+.neon-glow-volt {
+  box-shadow: 0 0 16px rgba(217, 239, 38, 0.45);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 16px rgba(0, 238, 252, 0.45);
+}
+
+.neon-glow-crimson {
+  box-shadow: 0 0 20px rgba(147, 0, 10, 0.7);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
